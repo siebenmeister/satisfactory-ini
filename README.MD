@@ -19,7 +19,7 @@ At lower-end machines or internet connections, use 480000 everywhere there is 10
 `%AppData%\..\Local\FactoryGame\Saved\Config\Windowsnoeditor\`
 
 ## Linux (Proton) .ini file location
-/home/../.local/share/Steam/steamapps/compatdata/526870/pfx/drive_c/users/steamuser/AppData/Local/FactoryGame/Saved/Config/WindowsNoEditor/
+`/home/../.local/share/Steam/steamapps/compatdata/526870/pfx/drive_c/users/steamuser/AppData/Local/FactoryGame/Saved/Config/WindowsNoEditor/`
 
 ## Reference changes
 **SET THE FILES AS READ-ONLY OTHERWISE SATISFACTORY WILL OVERWRITE THEM**
