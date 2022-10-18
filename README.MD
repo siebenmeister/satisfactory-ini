@@ -1,7 +1,10 @@
 # Multiplayer bandwidth fix settings for Satisfactory
 
 ## Important notes before you get started
-I've provided my full .ini files as a reference. __**DO NOT**__ copy my .ini files over your own. Only change the settings provided below in your own.
+**DO NOT**__ copy the .ini files over your own. Only change the settings provided below in your own.
+By default, the game's maximum bandwidth appears to be throttled at 64 KB/s. 
+By editing the config files, this limit is increased to 800 Mbit/s.
+At lower-end machines or internet connections, use 480000 everywhere there is 104857600, this sets the limit to 480 KB/s or ~3.66 Mbit/s. 
 
 ## The process
 * Step 0: Understand that you assume all risk for anything you break on your system making these changes
@@ -12,7 +15,14 @@ I've provided my full .ini files as a reference. __**DO NOT**__ copy my .ini fil
 * Step 5: change network quality in game to medium
 * Step 6: change network quality in game to ultra
 
+## Windows .ini file location
+`%AppData%\..\Local\FactoryGame\Saved\Config\Windowsnoeditor\`
+
+## Linux (Proton) .ini file location
+/home/../.local/share/Steam/steamapps/compatdata/526870/pfx/drive_c/users/steamuser/AppData/Local/FactoryGame/Saved/Config/WindowsNoEditor/
+
 ## Reference changes
+**SET THE FILES AS READ-ONLY OTHERWISE SATISFACTORY WILL OVERWRITE THEM**
 ```
 # Engine.ini
 [/Script/Engine.Player]
@@ -32,5 +42,12 @@ MaxInternetClientRate=104857600 ```
 TotalNetBandwidth=104857600
 MaxDynamicBandwidth=104857600
 MinDynamicBandwidth=10485760
-```
 
+# Scalability.ini
+[NetworkQuality@3]
+TotalNetBandwidth=104857600
+MaxDynamicBandwidth=104857600
+MinDynamicBandwidth=10485760
+```
+## Fandom Wiki Link
+https://satisfactory.fandom.com/wiki/Multiplayer
